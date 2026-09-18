@@ -93,14 +93,33 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
-	public String getName(int phone) {
-		
-	}
+    //Pre: this.doesPhoneExist(phone)
+    public String getName(int phone) {
+        for(int i = 0; i < counter; i++){
+            if(contacts[i].getPhone() == phone){
+                return contacts[i].getName();
+            }
+        }
+        return null;
+    }
 
-	public boolean doesPhoneExist(int phone) {
-	}
+    public boolean doesPhoneExist(int phone) {
+        for(int i = 0; i < counter; i++){
+            if(contacts[i].getPhone() == phone){
+                return true;
+            }
+        }
+        return false;
+    }
 
-	public boolean sharePhones() {
-
-	}
+    public boolean sharePhones() {
+        for(int i = 0; i < counter - 1; i++){
+            for(int j = i+1; j < counter; j++){
+                if(contacts[i].getPhone() == contacts[j].getPhone()){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
