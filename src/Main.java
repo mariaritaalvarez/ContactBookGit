@@ -62,7 +62,7 @@ public class Main {
 					getName(in,cBook);
 					break;
 				case EXISTS_PHONE:
-					existsPhone(in,cBook);
+					existsPhone(cBook);
                 default:
                     System.out.println(COMMAND_ERROR);
             }
