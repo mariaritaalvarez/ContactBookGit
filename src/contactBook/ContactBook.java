@@ -93,4 +93,14 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+	public String getName(int phone) {
+		
+	}
+
+	public boolean doesPhoneExist(int phone) {
+	}
+
+	public boolean sharePhones() {
+
+	}
 }
